@@ -1,7 +1,10 @@
 import { Card } from '../../components/Card/Card';
 
-export const Main = () => {
-  const cardQuantity = 5;
+interface MainProps {
+  placesQuantity: number;
+}
+export const Main = (props: MainProps) => {
+  const {placesQuantity} = props;
 
   return (
     <div className="page page--gray page--main">
@@ -93,7 +96,7 @@ export const Main = () => {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                {[...Array(cardQuantity).keys()].map((element) => <Card key={element}/>)}
+                {[...Array(placesQuantity).keys()].map((element) => <Card key={element}/>)}
               </div>
             </section>
             <div className="cities__right-section">
