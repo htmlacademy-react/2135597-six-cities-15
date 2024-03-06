@@ -4,5 +4,5 @@ export enum AppRoutes {
     FAVORITES = '/favorites',
     OFFER = '/offer',
     FORBIDDEN = '/forbidden',
-    NOT_FOUND = '/not_found'
+    NOT_FOUND = '/*'
  }

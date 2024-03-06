@@ -9,37 +9,37 @@ import { ForbiddenPage } from '../../../pages/ForbiddenPage/ForbiddenPage';
 
 
 export type AppRouteProps = RouteProps & {
-    isAuth: boolean;
+    authOnly: boolean;
  }
 export const RouteConfig: Record<AppRoutes, AppRouteProps> = {
   [AppRoutes.MAIN]: {
     path: AppRoutes.MAIN,
     element: <Main placesQuantity={4} />,
-    isAuth: false
+    authOnly: false
   },
   [AppRoutes.LOGIN]: {
     path: AppRoutes.LOGIN,
     element: <LoginPage />,
-    isAuth: false
+    authOnly: false
   },
   [AppRoutes.FAVORITES]: {
     path: AppRoutes.FAVORITES,
     element: <FavoritesPage />,
-    isAuth: true
+    authOnly: true
   },
   [AppRoutes.OFFER]: {
-    path: AppRoutes.OFFER,
+    path: `${AppRoutes.OFFER}/:id`,
     element: <OfferPage />,
-    isAuth: true
+    authOnly: true
   },
   [AppRoutes.FORBIDDEN]: {
     path: AppRoutes.FORBIDDEN,
     element: <ForbiddenPage />,
-    isAuth: false
+    authOnly: false
   },
   [AppRoutes.NOT_FOUND]: {
     path: AppRoutes.NOT_FOUND,
     element: <NotFoundPage />,
-    isAuth: false
+    authOnly: false
   },
 };
