@@ -5,6 +5,7 @@ import { LoginPage } from '../../../pages/LoginPage/LoginPage';
 import { FavoritesPage } from '../../../pages/FavoritesPage/FavoritesPage';
 import { OfferPage } from '../../../pages/OfferPage/OfferPage';
 import { NotFoundPage } from '../../../pages/NotFoundPage/NotFoundPage';
+import { ForbiddenPage } from '../../../pages/ForbiddenPage/ForbiddenPage';
 
 
 export type AppRouteProps = RouteProps & {
