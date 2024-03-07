@@ -1,13 +1,9 @@
-import { Main } from './pages/Main/Main';
+import { BrowserRouter } from 'react-router-dom';
+import { AppRouter } from './providers/router/AppRouter';
 
-interface AppProps {
-    placesQuantity: number;
-}
 
-export const App = (props: AppProps) => {
-  const {placesQuantity} = props;
-
-  return (
-    <Main placesQuantity={placesQuantity}/>
-  );
-};
+export const App = () => (
+  <BrowserRouter>
+    <AppRouter />
+  </BrowserRouter>
+);
